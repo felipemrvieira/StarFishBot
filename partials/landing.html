@@ -1,0 +1,198 @@
+<!-- public/partials/principal.html -->
+  <nav class="navbar navbar-default">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img class="center-block" src="img/logo-vermelha.png" alt="logo"></a>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-target="#myNavbar" ng-click="landingCtrl.openNav()">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse " id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                      <!-- <li><a href="javascript:void(0)" class="closebtn" ng-click="landingCtrl.closeNav()">&times;</a></li> -->
+                      <li><a href="#">Ajuda</a></li>
+                      <li><a href="#">Contato</a></li>
+                      <li><a href="#"><span class="glyphicon glyphicon-lock" aria-hidden="true"> </span>  Login</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div id="mySidenav" class="sidenav">
+             <a href="javascript:void(0)" class="closebtn" ng-click="landingCtrl.closeNav()">&times;</a>
+             <a href="#">Ajuda</a>
+             <a href="#">Contato</a>
+             <a href="#">Login</a>
+           </div>
+        </nav>
+
+
+
+
+<div id="sec-1">
+
+  <div class="container">
+    <div class="col-md-6 info">
+      <h1>Precisando de advogado?</h1>
+      <p class="chamada">Explique seu caso jurídico</p>
+      <p class="chamada">gratuitamente e seja</p>
+      <p class="chamada">contactado por advogados</p>
+
+      <div id="botao">
+        <button class="btn btn-default option fill" ng-click="goChat()">Envie seu caso jurídico agora</button>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-5 pessoa-container">
+      <img id="pessoa" class="" src="img/mulher.png" alt="">
+    </div>
+    <div id="botao-mobile">
+      <button class="btn btn-default option fill" ng-click="goChat()">Envie seu caso jurídico agora</button>
+    </div>
+
+    <div class="col-md-12 seta">
+      <a href="#sec-2"><img class="float" src="img/arrow.png" alt=""></a>
+    </div>
+
+  </div>
+</div>
+
+<div id="sec-2">
+  <div class="container-fluid">
+    <div class="col-md-12">
+      <h1>Como funciona</h1>
+    </div>
+
+    <div class="col-md-3 sub-sec">
+      <img class="center-block ajuste-img" src="img/informe2.png" alt="">
+      <p class="texto-centro">Informe seu problema gratuitamente e com segurança.</p>
+    </div>
+    <div class="col-md-3 sub-sec">
+      <img class="center-block ajuste-img" src="img/selecionaremos.png" alt="">
+      <p class="texto-centro">Selecionaremos o melhor advogado para o seu caso jurídico.</p>
+    </div>
+    <div class="col-md-3 sub-sec">
+      <img class="center-block ajuste-img" src="img/contato-advogado2.png" alt="">
+      <p class="texto-centro">Advogados da sua região entrarão em contato para te orientar com sigilo.</p>
+    </div>
+    <div class="col-md-3 sub-sec">
+      <img class="center-block ajuste-img" src="img/contrate2.png" alt="">
+      <p class="texto-centro">Contrate um advogado, caso necessário.</p>
+    </div>
+
+  </div>
+
+</div>
+
+<div id="sec-3">
+  <div class="container-fluid">
+      <h1 class="texto-centro">Fale com um advogado.<br>A qualquer hora. De qualquer lugar!</h1>
+  </div>
+</div>
+
+<div id="sec-4">
+
+  <div class="container-fluid">
+
+    <div id="app-container" class="col-md-6">
+      <img id="app" class="center-block img-responsive" src="img/app2.png" alt="">
+    </div>
+    <div class="col-md-5">
+    </div>
+
+    <div class="col-md-7">
+      <div class="container-fluid branco">
+        <p><span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+  Encontre um advogado na sua região de acordo com o seu caso jurídico</p>
+        <p><span class="glyphicon glyphicon-lock" aria-hidden="true"></span>  Todas as informações passadas estarão guardadas em sigilo. Não se preocupe!</p>
+        <p><span class="glyphicon glyphicon-time" aria-hidden="true"></span>  Praticidade: ganhe tempo e tenha os maiores profissionais 24h por dia.</p>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<div id="sec-5">
+
+  <div class="container-fluid">
+    <div class="col-md-5"></div>
+
+    <div class="col-md-7">
+      <div class="container-fluid">
+        <h1>Está com um problema e precisa conversar com um advogado?</h1>
+        <!-- <p>Fale com Eloisa, nossa assistente virtual!</p> -->
+        <div id="botao">
+            <button class="btn btn-default option fill" ng-click="goChat()">Envie seu caso jurídico agora!</button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<div id="sec-6">
+  <div class="container-fluid">
+    <h1>Veja se o seu caso é semelhante à algum desses:</h1>
+    <div class="col-md-3">
+      <p class="texto-centro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate nulla vel malesuada aliquet. Duis tristique neque tellus,
+        <br><a href="#">Saiba mais</a></p>
+    </div>
+    <div class="col-md-3">
+      <p class="texto-centro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate nulla vel malesuada aliquet. Duis tristique neque tellus,
+      <br><a href="#">Saiba mais</a></p></div>
+    <div class="col-md-3">
+      <p class="texto-centro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate nulla vel malesuada aliquet. Duis tristique neque tellus,
+      <br><a href="#">Saiba mais</a></p></div>
+    <div class="col-md-3">
+      <p class="texto-centro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate nulla vel malesuada aliquet. Duis tristique neque tellus,
+        <br>  <a href="#">Saiba mais</a></p></div>
+  </div>
+</div>
+
+<div id="sec-7">
+  <div class="container-fluid">
+    <div id="logo">
+      <a href="#sec-1"><img class="center-block" src="img/logo-branca.png" alt="Logo-Elo"></a>
+    </div>
+    <ul>
+      <li> <a data-toggle="modal" data-target="#modal">Quem Somos</a></li>
+      <li> <a data-toggle="modal" data-target="#modal">Termos de Uso</a></li>
+      <li> <a data-toggle="modal" data-target="#modal">Fale Conosco</a></li>
+    </ul>
+
+
+    <ul id="social">
+      <li><a href="https://www.facebook.com/elojuridico" target="_blank"> <i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></li>
+      <li><a href="https://www.instagram.com/elojuridico_oficial" target="_blank"> <i class="fa fa-instagram fa-2x"></i></a></li>
+    </ul>
+
+
+    <!-- Modal -->
+    <div id="modal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+
+
+  </div>
+</div>

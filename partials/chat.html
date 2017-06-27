@@ -1,0 +1,269 @@
+<div id="chat">
+  <div id="intro" class="animated">
+    <div id="intro-avatar" class="col-md-3 col-xs-12 col-sm-12">
+      <img class="img-responsive animated bounceIn" src="img/Eloisa.png">
+    </div>
+    <div id="intro-msg" class="col-md-9 col-xs-12 col-sm-12">
+      Olá, eu me chamo Eloisa!<br>
+      Sou a assistente virtual que vai te atender.<br>
+      Fique tranquilo, suas informações ficarão em sigilo!<br>
+    </div>
+  </div>
+  <div class="container-fluid">
+
+    <div id="header">
+      <div class="container">
+        <div id="voltar">
+          <a href="index.html"> <img src="img/arrow-voltar.svg" alt=""> </a>
+        </div>
+        <p class="center-block">Fale com a Eloisa!</p>
+        <div id="voltar">
+          <i class="fa fa-arrow-circle-left fa-2x" aria-hidden="true" style="opacity:0"></i>
+        </div>
+      </div>
+      <div id="avatar-eloisa" class="img-circle hide animated">
+      </div>
+    </div>
+
+    <div id="conversa" class="">
+
+      <!--TEMPLATE MENSAGEM-->
+      <script id="hidden-template-mensagem" type="text/x-custom-template">
+        <div  class="mensagem-container animated " >
+          <div id="avatar-mensagem" class="avatar">
+            <span id="avatar-elo">E</span>
+          </div>
+          <div class="typing">
+            <img src="img/tpng.gif">
+          </div>
+          <div id="mensagem" class="texto ng-hide">
+            <p id="txt"></p>
+          </div>
+        </div>
+      </script>
+      <!--TEMPLATE MENSAGEM-->
+
+      <!--TEMPLATE RESPOSTA-->
+      <script id="hidden-template-resposta" type="text/x-custom-template">
+      <div class="txt-right mensagem-container animated">
+        <div id="resposta" class="texto">
+          <p id="txt"></p>
+        </div>
+        <div id="avatar-resposta" class="avatar">
+          <span id="avatar-cliente"></span>
+        </div>
+      </div>
+      </script>
+      <!--TEMPLATE RESPOSTA-->
+
+
+
+
+    <!-- FORM NOME CLIENTE-->
+    <div id="form-container" class="animated bounceInUp" ng-hide="chatCtrl.escondeForm">
+      <form name="nomeUsuario" class="form-inline container" ng-submit="chatCtrl.enviaNome()">
+        <div class="input-texto-container form-group col-xs-12 ">
+          <input
+          autofocus
+          type="text"
+          name="nome"
+          required
+          class="form-control"
+          id="input-texto"
+          placeholder="digite seu nome aqui!"
+          ng-model="chatCtrl.usuario.nome">
+
+        </div>
+
+        <div class="input-botao-container form-group col-xs-12">
+          <button type="submit" id="botao-enviar" class="btn btn-default">Enviar</button>
+        </div>
+      </form>
+    </div>
+    <!-- FORM NOME CLIENTE-->
+
+    <!-- FORM TIPO CLIENTE-->
+    <div id="form-container-tipo" class="animated bounceInUp" ng-hide="chatCtrl.escondeFormTipo">
+      <form name="tipoUsuario" class="form-inline container">
+        <div class="col-md-12">
+          <p>Selecione a área que se assemelha com o seu caso jurídico</p>
+          <div class="input-botao-container form-group">
+            <button type="submit"
+            id="botao-enviar"
+            class="btn btn-default"
+            ng-click="chatCtrl.usuario.tipoCausa='Trabalhista'; chatCtrl.selTipo()"
+            >Trabalhista</button>
+          </div>
+          <div class="input-botao-container form-group">
+            <button type="submit"
+            id="botao-enviar"
+            class="btn btn-default"
+            ng-click="chatCtrl.usuario.tipoCausa='Pensão'; chatCtrl.selTipo()"
+            >Pensão</button>
+          </div>
+          <div class="input-botao-container form-group">
+            <button type="submit"
+            id="botao-enviar"
+            class="btn btn-default"
+            ng-click="chatCtrl.usuario.tipoCausa='Família'; chatCtrl.selTipo()"
+            >Família</button>
+          </div>
+          <div class="input-botao-container form-group">
+            <button type="submit"
+            id="botao-enviar"
+            class="btn btn-default"
+            ng-click="chatCtrl.usuario.tipoCausa='Bancário'; chatCtrl.selTipo()"
+            >Bancário</button>
+          </div>
+        </div>
+        <div class="col-md-12">
+
+          <div class="input-botao-container form-group">
+            <button type="submit"
+            id="botao-enviar"
+            class="btn btn-default"
+            ng-click="chatCtrl.usuario.tipoCausa='Consumidor'; chatCtrl.selTipo()"
+            >Consumidor</button>
+          </div>
+          <div class="input-botao-container form-group">
+            <button type="submit"
+            id="botao-enviar"
+            class="btn btn-default"
+            ng-click="chatCtrl.usuario.tipoCausa='INSS'; chatCtrl.selTipo()"
+            >INSS</button>
+          </div>
+
+          <div class="input-botao-container form-group">
+            <button type="submit"
+            id="botao-enviar"
+            class="btn btn-default"
+            ng-click="chatCtrl.usuario.tipoCausa='Outro'; chatCtrl.selTipo()"
+            >Outro</button>
+          </div>
+
+        </div>
+
+
+      </form>
+    </div>
+    <!-- FORM TIPO CLIENTE-->
+
+
+    <!-- FORM cidade CLIENTE-->
+    <div id="form-container" class="animated bounceInUp" ng-hide="chatCtrl.escondeFormCidade">
+      <form id="form-cidade" name="cidadeUsuario" class="form-inline container">
+        <div class="col-md-12">
+          <p>Digite sua cidade</p>
+        </div>
+        <div class="col-md-12">
+
+          <div class="col-md-9 col-sm-12" style="height:45px;">
+
+
+            <input class="col-md-12 col-sm-12 col-xs-12" list="cidades" name="cidade" autocomplete="off"
+            ng-model="chatCtrl.usuario.cidade" ng-change="chatCtrl.selecionaCidade()"
+            ng-keypress="chatCtrl.listaCidades()"  placeholder="Digite sua cidade" autofocus>
+
+            <datalist id="cidades">
+              <option  data-ng-repeat="cidade in chatCtrl.cidades" value="{{cidade.nome}}">
+            </datalist>
+          </div>
+
+
+          <div class="input-container form-group col-md-3" ng-hide="chatCtrl.escondeBotaoCidade">
+            <button type="submit"
+            class="btn btn-default"
+            ng-click="chatCtrl.selCidade()"
+            >Selecionar</button>
+          </div>
+
+        </div>
+
+
+      </form>
+    </div>
+    <!-- FORM cidade CLIENTE-->
+
+
+    <!-- FORM DESCRICAO CLIENTE-->
+    <div id="form-container" class="animated bounceInUp" ng-hide="chatCtrl.escondeFormDescricao">
+      <form name="descricaoUsuario" class="form-inline container" ng-submit="chatCtrl.enviaDescricao()">
+        <div class="input-texto-container form-group">
+          <textarea
+            autofocus
+            placeholder="Descreva seu caso!"
+
+          class="form-control"
+          rows="5"
+          required
+          id="comment"
+          ng-model="chatCtrl.usuario.descricao"
+          ></textarea>
+        </div>
+
+        <div class="input-botao-container form-group">
+          <button type="submit" id="botao-enviar" class="btn btn-default">Enviar</button>
+        </div>
+      </form>
+    </div>
+    <!-- FORM DESCRICAO CLIENTE-->
+
+    <!-- FORM EMAIL CLIENTE-->
+    <div id="form-container" class="animated bounceInUp" ng-hide="chatCtrl.escondeFormEmail">
+      <form name="emailUsuario" class="form-inline container" ng-submit="chatCtrl.enviaEmail()">
+        <div class="input-texto-container form-group">
+          <input
+          autofocus
+          type="email"
+          name="email"
+          required
+          class="form-control"
+          id="input-texto"
+          placeholder="digite seu email aqui!"
+          ng-model="chatCtrl.usuario.email">
+
+        </div>
+
+        <div class="input-botao-container form-group">
+          <button type="submit" id="botao-enviar" class="btn btn-default">Enviar</button>
+        </div>
+      </form>
+    </div>
+    <!-- FORM EMAIL CLIENTE-->
+
+    <!-- FORM TELEFONE CLIENTE-->
+    <div id="form-container" class="animated bounceInUp" ng-hide="chatCtrl.escondeFormTelefone">
+      <form name="telefoneUsuario" class="form-inline container" ng-submit="chatCtrl.enviaTelefone()">
+        <div class="input-texto-container form-group">
+          <input
+          autofocus
+          type="number"
+          name="telefone"
+          required
+          class="form-control"
+          id="input-texto"
+          placeholder="digite seu telefone!"
+          ng-model="chatCtrl.usuario.telefone">
+
+        </div>
+
+        <div class="input-botao-container form-group">
+          <button type="submit" id="botao-enviar" class="btn btn-default">Enviar</button>
+        </div>
+      </form>
+    </div>
+    <!-- FORM TELEFONE CLIENTE-->
+
+    <!-- FORM VOLTAR-->
+    <div id="form-container" class="animated bounceInUp" ng-hide="chatCtrl.escondeFormVoltar">
+      <div class="input-botao-container-voltar form-group">
+        <button type="submit" id="botao-enviar" class="btn btn-default" ng-click="chatCtrl.voltar()">Voltar à página inicial</button>
+      </div>
+    </div>
+    <!-- FORM VOLTAR-->
+
+  </div>
+</div>
+
+
+</div>

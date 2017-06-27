@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Casos Jurídicos</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/estilo.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/typed.js"></script>
+    <script src="js/video.js"></script>
+
+</head>
+<body>
+
+    <div class="container-fluid">
+
+        <div id="chat">
+          <div class="container-fluid">
+
+            <div id="header">
+              <div class="container">
+                <div id="voltar">
+                  <a href="index.html"> <i class="fa fa-arrow-circle-left fa-2x" aria-hidden="true"></i> </a>
+                </div>
+                <p class="center-block">Fale com a Eloisa!</p>
+                <div id="voltar">
+                  <i class="fa fa-arrow-circle-left fa-2x" aria-hidden="true" style="opacity:0"></i>
+                </div>
+              </div>
+            </div>
+
+            <div id="conversa" class=" ">
+
+              <!--TEMPLATE MENSAGEM-->
+              <script id="hidden-template-mensagem" type="text/x-custom-template">
+                <div  class="mensagem-container animated bounceInUp">
+                  <div id="avatar-mensagem" class="avatar">
+                    <img src="img/logo-avatar.png" alt="">
+                  </div>
+                  <div id="mensagem" class="texto">
+                    <p id="txt"></p>
+                  </div>
+                </div>
+              </script>
+              <!--TEMPLATE MENSAGEM-->
+
+              <!--TEMPLATE RESPOSTA-->
+              <script id="hidden-template-resposta" type="text/x-custom-template">
+              <div class="txt-right mensagem-container animated bounceInUp">
+                <div id="resposta" class="texto">
+                  <p id="txt"></p>
+                </div>
+                <div id="avatar-resposta" class="avatar">
+                  <img src="img/logo-avatar.png" alt="">
+                </div>
+              </div>
+              </script>
+              <!--TEMPLATE RESPOSTA-->
+
+
+
+
+            <!-- FORM -->
+            <script id="hidden-template-form" type="text/x-custom-template">
+            <div id="form-container" class="animated bounceInUp">
+              <form class="form-inline container">
+                <div class="input-texto-container form-group">
+                  <input type="text" class="form-control" id="input-texto" placeholder="digite aqui">
+                </div>
+                <div class="input-botao-container form-group">
+                  <button type="submit" id="botao-enviar" class="btn btn-default">Enviar</button>
+                </div>
+              </form>
+            </div>
+            </script>
+
+            <!-- FORM -->
+
+
+
+          </div>
+        </div>
+
+
+    </div>
+
+    <script>
+      // templates das mensagens
+      var templateMensagem = $('#hidden-template-mensagem').html();
+      var templateResposta = $('#hidden-template-resposta').html();
+      var templateForm = $('#hidden-template-form').html();
+
+      var mensagem = ["Olá, eu sou Eloisa. :)", 3,
+      "Sei que o que te trouxe aqui não deve ser um assunto tão agradável, mas não se preocupe eu estou aqui para te ajudar!", 1/5,
+      "Antes de começarmos, como posso te chamar?", 3,
+      "nome",
+      "Prazer FULANO! Então, a primeira coisa a fazer, é identificar o problema que te trás aqui. Para isso, vou fazer algumas perguntas básicas, ok?",
+      "Qual a cidade que você mora?",
+      "Você quer contratar um advogado ou apenas tirar uma dúvida?",
+      "Do que se trata o seu caso?",
+      ];
+
+      var i = 0;
+
+      $(function() {
+          $('#conversa').append(templateMensagem);
+          digita(mensagem[i], 3);
+      });
+
+      // $('body').click(function() {
+      //     $('#conversa').append(templateResposta);
+      //     digita(mensagem[i], 3);
+      //
+      // });
+
+      function chamaDigita() {
+          //INSERE O TEMPLATE DE MENSAGEM
+          if (mensagem[i] == "nome"){
+            exibeForm();
+            setInterval(2000);
+            alert('teste');
+            return i;
+          }
+          $('#conversa').append(templateMensagem);
+          //MANTEM O FOCO NA ULTIMA MENSAGEM
+          $(document).scrollTop(1000);
+          digita(mensagem[i], mensagem[i+1]);
+
+      };
+
+      function digita(mensagem, tempo){
+          $("#txt:last-child").typed({
+            strings: [mensagem],
+            typeSpeed: tempo,
+            callback: function() {chamaDigita()}
+          });
+          i += 2;
+
+      };
+
+      function exibeForm(){
+        $('#conversa').append(templateForm);
+      }
+    </script>
+
+</body>
+</html>

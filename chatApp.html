@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="casosJuridicos">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Casos Jurídicos</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/estilo.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/typed.js"></script>
+    <script src="js/video.js"></script>
+
+
+    <script src="js/lib/angular.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/controllers/chat-controller.js"></script>
+    <script src="js/directives/minhas-diretivas.js"></script>
+
+</head>
+<body ng-controller="chatController">
+
+    <div class="container-fluid">
+
+        <div id="chat">
+          <div class="container-fluid">
+
+            <div id="header">
+              <div class="container">
+                <div id="voltar">
+                  <a href="index.html"> <i class="fa fa-arrow-circle-left fa-2x" aria-hidden="true"></i> </a>
+                </div>
+                <p class="center-block">Fale com a Eloisa!</p>
+                <div id="voltar">
+                  <i class="fa fa-arrow-circle-left fa-2x" aria-hidden="true" style="opacity:0"></i>
+                </div>
+              </div>
+            </div>
+
+            <div id="conversa" class=" ">
+
+              <chat-mensagem ng-repeat="mensagem in mensagens" textoMensagem="{{mensagem.textoMensagem}} alerter">
+                <p id="txt">{{mensagem.textoMensagem}}</p>
+              </chat-mensagem>
+
+            
+
+
+            <!-- FORM -->
+            <div id="form-container" class="">
+              <form class="form-inline container">
+                <div class="input-texto-container form-group">
+                  <input type="text" class="form-control" id="input-texto" placeholder="digite aqui">
+                </div>
+                <div class="input-botao-container form-group">
+                  <button type="submit" id="botao-enviar" class="btn btn-default">Enviar</button>
+                </div>
+              </form>
+            </div>
+
+            <!-- FORM -->
+
+
+
+          </div>
+        </div>
+
+
+    </div>
+
+
+
+</body>
+</html>
