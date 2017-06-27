@@ -1056,11 +1056,11 @@ box-shadow: 4px 0px 27px -8px rgba(163,163,163,1);
             border: 2px solid white;
 
             &:hover{
-              transition: box-shadow 2.5s ease-out;
-              // -webkit-animation: neon6 1.5s ease-in-out infinite alternate;
-              // -moz-animation: neon6 1.5s ease-in-out infinite alternate;
-              // animation: neon6 1.5s ease-in-out infinite alternate;
-              box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF9900, 0 0 70px #FF9900, 0 0 80px #FF9900, 0 0 100px #FF9900, 0 0 150px #FF9900;
+              // transition: box-shadow 2.5s ease-out;
+              -webkit-animation: neon6 1.5s ease-in-out infinite alternate;
+              -moz-animation: neon6 1.5s ease-in-out infinite alternate;
+              animation: neon6 1.5s ease-in-out infinite alternate;
+              // box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF9900, 0 0 70px #FF9900, 0 0 80px #FF9900, 0 0 100px #FF9900, 0 0 150px #FF9900;
 
             }
           }

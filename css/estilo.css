@@ -695,8 +695,9 @@ body {
         border-radius: 100%;
         border: 2px solid white; }
         #chat #conversa .mensagem-container .avatar img:hover {
-          transition: box-shadow 2.5s ease-out;
-          box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF9900, 0 0 70px #FF9900, 0 0 80px #FF9900, 0 0 100px #FF9900, 0 0 150px #FF9900; }
+          -webkit-animation: neon6 1.5s ease-in-out infinite alternate;
+          -moz-animation: neon6 1.5s ease-in-out infinite alternate;
+          animation: neon6 1.5s ease-in-out infinite alternate; }
     #chat #conversa .mensagem-container #mensagem {
       text-align: left;
       font-family: 'Lato-Regular';
