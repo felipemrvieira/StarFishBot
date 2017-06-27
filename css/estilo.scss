@@ -37,21 +37,18 @@
 
 $cinza-claro: #f9f9f9;
 $cinza-escuro: #444;
-$laranja-claro: #e04a14;
-$laranja-escuro: #b71d19;
-$pastel-escuro: #FF5F6D;
-$pastel-claro: #FFC371;
+$roxo-claro: #442c55;
+$roxo-escuro: #251d40;
+$roxo: #503a6d;
 
-@mixin degrade-oficial(){
-  background: #b71d29;
-  background: -moz-linear-gradient(45deg,  #b71d19 2%, #bf1c19 79%, #e04a14 79%, #e04a14 100%);
-  background: -webkit-linear-gradient(45deg,  #b71d19 2%, #e04a14 79%,#e04a14 79%,#e04a14 100%);
-  background: linear-gradient(45deg,  #b71d19 2%,#e04a14 79%,#e04a14 79%,#e04a14 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b71d19', endColorstr='#e04a14',GradientType=1 );
-}
 @mixin degrade(){
-  background: linear-gradient(to left, #FF5F6D , #FFC371);
+  background: #251d40;
+  background: -moz-linear-gradient(45deg,  #251d40 2%, #bf1c19 79%, #442c55 79%, #442c55 100%);
+  background: -webkit-linear-gradient(45deg,  #251d40 2%, #442c55 79%,#442c55 79%,#442c55 100%);
+  background: linear-gradient(45deg,  #251d40 2%,#442c55 79%,#442c55 79%,#442c55 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#251d40', endColorstr='#442c55',GradientType=1 );
 }
+
 
 @mixin float(){
    float: left;
@@ -64,6 +61,22 @@ $pastel-claro: #FFC371;
    -moz-animation-iteration-count: infinite;
    -moz-animation-timing-function: ease-in-out;
 
+}
+@-webkit-keyframes neon5 {
+  from {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF9900, 0 0 70px #FF9900, 0 0 80px #FF9900, 0 0 100px #FF9900, 0 0 150px #FF9900;
+  }
+  to {
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF9900, 0 0 35px #FF9900, 0 0 40px #FF9900, 0 0 50px #FF9900, 0 0 75px #FF9900;
+  }
+}
+@-webkit-keyframes neon6 {
+  from {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+  }
+  to {
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+  }
 }
 
 @-webkit-keyframes Floatingx{
@@ -79,8 +92,9 @@ $pastel-claro: #FFC371;
    }
 
 body{
-  background-color: #fdfdfd;
+  @include degrade();
   -webkit-font-smoothing: antialiased;
+  height: 100vh;
 }
 
 // body::-webkit-scrollbar {
@@ -184,14 +198,14 @@ box-shadow: 4px 0px 27px -8px rgba(163,163,163,1);
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 20px;
-    color: $pastel-escuro;
+    color: $roxo-escuro;
     display: block;
     transition: 0.3s
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover, .offcanvas a:focus{
-    color: $pastel-claro;
+    color: $roxo-claro;
 }
 
 /* Position and style the close button (top right corner) */
@@ -477,7 +491,7 @@ box-shadow: 4px 0px 27px -8px rgba(163,163,163,1);
   h1{
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    color: $pastel-escuro;
+    color: $roxo-escuro;
     text-align: center;
     padding: 32px 0 42px 0;
     margin: 0;
@@ -571,7 +585,7 @@ box-shadow: 4px 0px 27px -8px rgba(163,163,163,1);
       button {
         max-width: 90%;
         font-size: 20px;
-        color: $pastel-escuro;
+        color: $roxo-escuro;
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
         text-transform: uppercase;
@@ -580,7 +594,7 @@ box-shadow: 4px 0px 27px -8px rgba(163,163,163,1);
         position: relative;
 
 
-        border: 2px $pastel-escuro solid;
+        border: 2px $roxo-escuro solid;
         text-transform: uppercase;
         outline: 0;
         overflow:hidden;
@@ -610,8 +624,8 @@ box-shadow: 4px 0px 27px -8px rgba(163,163,163,1);
       .fill:before {
         content: "";
         position: absolute;
-        background: $pastel-escuro;
-        color: $pastel-claro;
+        background: $roxo-escuro;
+        color: $roxo-claro;
         bottom: 0;
         left: 0;
         right: 0;
@@ -807,10 +821,11 @@ box-shadow: 4px 0px 27px -8px rgba(163,163,163,1);
     }
   }
 
+// cabeçalho do chat
   #header{
     position: fixed;
     width: 100%;
-    @include degrade();
+    background-color: $roxo;
     color: white;
     padding-top: 28px;
     padding-bottom: 28px;
@@ -875,7 +890,7 @@ box-shadow: 4px 0px 27px -8px rgba(163,163,163,1);
       height: 150px;
       width: 150px;
       line-height: 150px;
-      background-image: url(../img/Eloisa-mini.png);
+      background-image: url(../img/avatar-mini.png);
 
       position: absolute;
       right: 300px;
@@ -895,7 +910,7 @@ box-shadow: 4px 0px 27px -8px rgba(163,163,163,1);
         width: 80px;
         line-height: 80px;
         right: 30px;
-        background-image: url(../img/Eloisa-mini80.png);
+        background-image: url(../img/avatar-mini8080.png);
       }
     }
   }
@@ -916,23 +931,21 @@ box-shadow: 4px 0px 27px -8px rgba(163,163,163,1);
       #avatar-mensagem{
         float: left;
 
+        // avatar mini 4040
+        // background-image: url(../img/avatar-mini4040.png);
+
         #avatar-elo{
-          height: 40px;
-          font-size: 20px;
-          padding: 9px 16px;
-          border-radius: 8px;
-          background-color: $pastel-escuro;
-          color: white;
+          // border-radius: 8px;
           transition: background-color 0.5s ease;
           &:hover{
-            background-color: $pastel-claro;
+            background-color: $roxo-claro;
           }
 
         }
           @media screen and (max-device-width: 700px) {
             #avatar-elo{
-              font-size: 15px;
-              padding: 5px 10px;
+              height: 40px;
+              width: 40px;
             }
           }
       }
@@ -955,14 +968,11 @@ box-shadow: 4px 0px 27px -8px rgba(163,163,163,1);
       }
 
       #mensagem{
-        margin-left: 10px;
-        border-radius: 0 10px 10px 10px;
-        box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
-        padding: 10px 15px;
+        margin-left: 8px;
         text-align: left;
         font-family: 'Lato-Regular';
-        color: #666;
-        background-color: white;
+
+
         p{
           font-size: 22px;
         }
@@ -970,7 +980,7 @@ box-shadow: 4px 0px 27px -8px rgba(163,163,163,1);
 
       #resposta{
         margin-right: 10px;
-        background-color: $pastel-claro;
+        background-color: $roxo-claro;
         border-radius: 10px 0 10px 10px;
         box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
         padding: 10px 15px;
@@ -1000,11 +1010,11 @@ box-shadow: 4px 0px 27px -8px rgba(163,163,163,1);
           font-size: 20px;
           padding: 9px 16px;
           border-radius: 8px;
-          background-color: $pastel-claro;
+          background-color: $roxo-claro;
           color: white;
           transition: background-color 0.5s ease;
           &:hover{
-            background-color: $pastel-escuro;
+            background-color: $roxo-escuro;
           }
         }
       }
@@ -1041,7 +1051,18 @@ box-shadow: 4px 0px 27px -8px rgba(163,163,163,1);
         .avatar{
           padding: 0;
           img{
-            width: 18px;
+            width: 40px;
+            border-radius: 100%;
+            border: 2px solid white;
+
+            &:hover{
+              transition: box-shadow 2.5s ease-out;
+              // -webkit-animation: neon6 1.5s ease-in-out infinite alternate;
+              // -moz-animation: neon6 1.5s ease-in-out infinite alternate;
+              // animation: neon6 1.5s ease-in-out infinite alternate;
+              box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF9900, 0 0 70px #FF9900, 0 0 80px #FF9900, 0 0 100px #FF9900, 0 0 150px #FF9900;
+
+            }
           }
           vertical-align: super;
           display: inline-block;
@@ -1050,12 +1071,19 @@ box-shadow: 4px 0px 27px -8px rgba(163,163,163,1);
         #mensagem{
           text-align: left;
           font-family: 'Lato-Regular';
-          color: #636363;
+          color: white;
           // height: 18px;
           // line-height: 18px;
           // padding-top: 4px;
           p{
             font-size: 18px;
+            margin: 0;
+          }
+          #txt-header{
+            font-size: 12px;
+            color: #efc04d;
+            // color: #8d6bbb;
+            margin: 0;
           }
         }
       }
@@ -1095,7 +1123,7 @@ box-shadow: 4px 0px 27px -8px rgba(163,163,163,1);
         font-family: 'Lato-Regular';
         font-size: 24px;
         line-height: 24px;
-        background-color: $pastel-escuro;
+        background-color: $roxo-escuro;
         border-radius: 8px;
         border: 0;
         padding: 20px;
@@ -1172,14 +1200,14 @@ box-shadow: 4px 0px 27px -8px rgba(163,163,163,1);
         font-family: 'Lato-Regular';
         font-size: 22px;
         line-height: 22px;
-        background-color: $pastel-escuro;
+        background-color: $roxo-escuro;
         border-radius: 15px;
         border: 0;
         padding: 25px;
         transition: 0.3s ease;
 
         &:hover{
-          background-color: $pastel-claro;
+          background-color: $roxo-claro;
 
         }
       }
@@ -1215,14 +1243,14 @@ box-shadow: 4px 0px 27px -8px rgba(163,163,163,1);
       font-family: 'Lato-Regular';
       font-size: 22px;
       line-height: 22px;
-      background-color: $pastel-escuro;
+      background-color: $roxo-escuro;
       border-radius: 15px;
       border: 0;
       padding: 25px;
       transition: 0.3s ease;
 
       &:hover{
-        background-color: $pastel-claro;
+        background-color: $roxo-claro;
 
       }
     }
@@ -1245,7 +1273,7 @@ box-shadow: 4px 0px 27px -8px rgba(163,163,163,1);
     }
     button{
       vertical-align: -webkit-baseline-middle;
-      background-color: $pastel-escuro;
+      background-color: $roxo-escuro;
       border-radius: 8px;
       color: white;
       height: 45px;
@@ -1257,7 +1285,7 @@ box-shadow: 4px 0px 27px -8px rgba(163,163,163,1);
       transition: 0.3s ease;
 
       &:hover{
-        background-color: $pastel-claro;
+        background-color: $roxo-claro;
 
       }
     }

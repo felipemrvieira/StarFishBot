@@ -74,7 +74,7 @@ function($location, $interval, $window, $http){
       $("#avatar-eloisa").removeClass("hide");
       $("#avatar-eloisa").addClass("bounceInUp");
       enviaMsg();
-    }, 5000, 1);
+    }, 50, 1);
   });
 
     var enviaMsg = function(){
@@ -187,11 +187,11 @@ function($location, $interval, $window, $http){
         default:
           $('#conversa').append(templateMensagem);
           $('.mensagem-container:last-child').find("#txt").text(mensagem[i]);
-          $interval(function(){
-            $('.mensagem-container:last-child').find(".typing").addClass("ng-hide");
-            $('.mensagem-container:last-child').find("#mensagem").removeClass("ng-hide");
-            enviaMsg();
-          }, 1600, 1);
+          $('.mensagem-container:last-child').find("#mensagem").removeClass("ng-hide");
+
+          enviaMsg();
+          window.navigator.vibrate(200);
+
           i += 2;
           $(document).scrollTop(10000);
 
@@ -208,7 +208,6 @@ function($location, $interval, $window, $http){
       $interval(function(){
         $('#conversa').append(templateMensagem);
         $('.mensagem-container:last-child').find("#txt").text("Prazer, " + self.usuario.nome+"!");
-        $('.mensagem-container:last-child').find(".typing").addClass("ng-hide");
         $('.mensagem-container:last-child').find("#mensagem").removeClass("ng-hide");
         enviaMsg();
       }, 2000, 1);
@@ -243,7 +242,6 @@ function($location, $interval, $window, $http){
         var msgRespostaTipo = ["Bem delicado, mas iremos te ajudar!", "Tudo bem, fique tranquilo pois o seu caso tem solução!"];
 
           $('.mensagem-container:last-child').find("#txt").text(msgRespostaTipo[x]);
-        $('.mensagem-container:last-child').find(".typing").addClass("ng-hide");
         $('.mensagem-container:last-child').find("#mensagem").removeClass("ng-hide");
         enviaMsg();
       }, 2000, 1);
@@ -296,13 +294,12 @@ function($location, $interval, $window, $http){
             $('.mensagem-container:last-child').find("#txt").text("Desculpe, não consideramos " + self.usuario.email +" um email válido!");
             $(document).scrollTop(10000);
             $interval(function(){
-              $('.mensagem-container:last-child').find(".typing").addClass("ng-hide");
               $('.mensagem-container:last-child').find("#mensagem").removeClass("ng-hide");
               if (t.data.did_you_mean) {
                 $('#conversa').append(templateMensagem);
                 $('.mensagem-container:last-child').find("#txt").text("Você quis dizer " + t.data.did_you_mean +"?");
                 $interval(function(){
-                  $('.mensagem-container:last-child').find(".typing").addClass("ng-hide");
+
                   $('.mensagem-container:last-child').find("#mensagem").removeClass("ng-hide");
                   $(document).scrollTop(10000);
                 }, 1500, 1);

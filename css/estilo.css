@@ -23,6 +23,16 @@
   animation-duration: 2s;
   animation-delay: 4s; }
 
+@-webkit-keyframes neon5 {
+  from {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF9900, 0 0 70px #FF9900, 0 0 80px #FF9900, 0 0 100px #FF9900, 0 0 150px #FF9900; }
+  to {
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF9900, 0 0 35px #FF9900, 0 0 40px #FF9900, 0 0 50px #FF9900, 0 0 75px #FF9900; } }
+@-webkit-keyframes neon6 {
+  from {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de; }
+  to {
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de; } }
 @-webkit-keyframes Floatingx {
   from {
     -webkit-transform: translate(0, 0px); }
@@ -38,8 +48,13 @@
   to {
     -moz-transform: translate(0, 0px); } }
 body {
-  background-color: #fdfdfd;
-  -webkit-font-smoothing: antialiased; }
+  background: #251d40;
+  background: -moz-linear-gradient(45deg, #251d40 2%, #bf1c19 79%, #442c55 79%, #442c55 100%);
+  background: -webkit-linear-gradient(45deg, #251d40 2%, #442c55 79%, #442c55 79%, #442c55 100%);
+  background: linear-gradient(45deg, #251d40 2%, #442c55 79%, #442c55 79%, #442c55 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#251d40', endColorstr='#442c55',GradientType=1 );
+  -webkit-font-smoothing: antialiased;
+  height: 100vh; }
 
 .branco {
   color: white; }
@@ -115,13 +130,13 @@ body {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 20px;
-  color: #FF5F6D;
+  color: #251d40;
   display: block;
   transition: 0.3s; }
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover, .offcanvas a:focus {
-  color: #FFC371; }
+  color: #442c55; }
 
 /* Position and style the close button (top right corner) */
 .sidenav .closebtn {
@@ -320,7 +335,7 @@ body {
   #sec-3 h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    color: #FF5F6D;
+    color: #251d40;
     text-align: center;
     padding: 32px 0 42px 0;
     margin: 0; }
@@ -382,14 +397,14 @@ body {
     #sec-5 #botao button {
       max-width: 90%;
       font-size: 20px;
-      color: #FF5F6D;
+      color: #251d40;
       font-family: 'Montserrat', sans-serif;
       font-weight: bold;
       text-transform: uppercase;
       border-radius: 12px;
       padding: 15px 30px;
       position: relative;
-      border: 2px #FF5F6D solid;
+      border: 2px #251d40 solid;
       text-transform: uppercase;
       outline: 0;
       overflow: hidden;
@@ -410,8 +425,8 @@ body {
     #sec-5 #botao .fill:before {
       content: "";
       position: absolute;
-      background: #FF5F6D;
-      color: #FFC371;
+      background: #251d40;
+      color: #442c55;
       bottom: 0;
       left: 0;
       right: 0;
@@ -453,7 +468,11 @@ body {
 
 #sec-7 {
   height: 500px;
-  background: linear-gradient(to left, #FF5F6D, #FFC371); }
+  background: #251d40;
+  background: -moz-linear-gradient(45deg, #251d40 2%, #bf1c19 79%, #442c55 79%, #442c55 100%);
+  background: -webkit-linear-gradient(45deg, #251d40 2%, #442c55 79%, #442c55 79%, #442c55 100%);
+  background: linear-gradient(45deg, #251d40 2%, #442c55 79%, #442c55 79%, #442c55 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#251d40', endColorstr='#442c55',GradientType=1 ); }
   #sec-7 #logo {
     padding-top: 120px; }
     #sec-7 #logo img {
@@ -507,7 +526,11 @@ body {
     padding: 32px 64px 32px 64px; } }
 #chat #intro {
   position: absolute;
-  background: linear-gradient(to left, #FF5F6D, #FFC371);
+  background: #251d40;
+  background: -moz-linear-gradient(45deg, #251d40 2%, #bf1c19 79%, #442c55 79%, #442c55 100%);
+  background: -webkit-linear-gradient(45deg, #251d40 2%, #442c55 79%, #442c55 79%, #442c55 100%);
+  background: linear-gradient(45deg, #251d40 2%, #442c55 79%, #442c55 79%, #442c55 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#251d40', endColorstr='#442c55',GradientType=1 );
   height: 100%;
   width: 100%;
   z-index: 10; }
@@ -529,7 +552,7 @@ body {
 #chat #header {
   position: fixed;
   width: 100%;
-  background: linear-gradient(to left, #FF5F6D, #FFC371);
+  background-color: #503a6d;
   color: white;
   padding-top: 28px;
   padding-bottom: 28px; }
@@ -572,7 +595,7 @@ body {
     height: 150px;
     width: 150px;
     line-height: 150px;
-    background-image: url(../img/Eloisa-mini.png);
+    background-image: url(../img/avatar-mini.png);
     position: absolute;
     right: 300px;
     top: 60px; }
@@ -586,7 +609,7 @@ body {
       width: 80px;
       line-height: 80px;
       right: 30px;
-      background-image: url(../img/Eloisa-mini80.png); } }
+      background-image: url(../img/avatar-mini8080.png); } }
 @media screen and (max-device-width: 700px) {
   #chat #header {
     padding: 20px; } }
@@ -598,19 +621,13 @@ body {
     #chat #conversa .mensagem-container #avatar-mensagem {
       float: left; }
       #chat #conversa .mensagem-container #avatar-mensagem #avatar-elo {
-        height: 40px;
-        font-size: 20px;
-        padding: 9px 16px;
-        border-radius: 8px;
-        background-color: #FF5F6D;
-        color: white;
         transition: background-color 0.5s ease; }
         #chat #conversa .mensagem-container #avatar-mensagem #avatar-elo:hover {
-          background-color: #FFC371; }
+          background-color: #442c55; }
       @media screen and (max-device-width: 700px) {
         #chat #conversa .mensagem-container #avatar-mensagem #avatar-elo {
-          font-size: 15px;
-          padding: 5px 10px; } }
+          height: 40px;
+          width: 40px; } }
     #chat #conversa .mensagem-container #avatar-resposta {
       float: right; }
     #chat #conversa .mensagem-container .avatar {
@@ -621,19 +638,14 @@ body {
     #chat #conversa .mensagem-container .typing img {
       padding-left: 10px; }
     #chat #conversa .mensagem-container #mensagem {
-      margin-left: 10px;
-      border-radius: 0 10px 10px 10px;
-      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-      padding: 10px 15px;
+      margin-left: 8px;
       text-align: left;
-      font-family: 'Lato-Regular';
-      color: #666;
-      background-color: white; }
+      font-family: 'Lato-Regular'; }
       #chat #conversa .mensagem-container #mensagem p {
         font-size: 22px; }
     #chat #conversa .mensagem-container #resposta {
       margin-right: 10px;
-      background-color: #FFC371;
+      background-color: #442c55;
       border-radius: 10px 0 10px 10px;
       box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
       padding: 10px 15px;
@@ -652,11 +664,11 @@ body {
         font-size: 20px;
         padding: 9px 16px;
         border-radius: 8px;
-        background-color: #FFC371;
+        background-color: #442c55;
         color: white;
         transition: background-color 0.5s ease; }
         #chat #conversa .mensagem-container #avatar-resposta span:hover {
-          background-color: #FF5F6D; }
+          background-color: #251d40; }
     @media screen and (max-device-width: 700px) {
       #chat #conversa .mensagem-container #avatar-resposta {
         height: 18px; }
@@ -679,13 +691,23 @@ body {
       vertical-align: super;
       display: inline-block; }
       #chat #conversa .mensagem-container .avatar img {
-        width: 18px; }
+        width: 40px;
+        border-radius: 100%;
+        border: 2px solid white; }
+        #chat #conversa .mensagem-container .avatar img:hover {
+          transition: box-shadow 2.5s ease-out;
+          box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF9900, 0 0 70px #FF9900, 0 0 80px #FF9900, 0 0 100px #FF9900, 0 0 150px #FF9900; }
     #chat #conversa .mensagem-container #mensagem {
       text-align: left;
       font-family: 'Lato-Regular';
-      color: #636363; }
+      color: white; }
       #chat #conversa .mensagem-container #mensagem p {
-        font-size: 18px; } }
+        font-size: 18px;
+        margin: 0; }
+      #chat #conversa .mensagem-container #mensagem #txt-header {
+        font-size: 12px;
+        color: #efc04d;
+        margin: 0; } }
 #chat #form-container {
   position: fixed;
   z-index: 10;
@@ -711,7 +733,7 @@ body {
       font-family: 'Lato-Regular';
       font-size: 24px;
       line-height: 24px;
-      background-color: #FF5F6D;
+      background-color: #251d40;
       border-radius: 8px;
       border: 0;
       padding: 20px;
@@ -760,13 +782,13 @@ body {
       font-family: 'Lato-Regular';
       font-size: 22px;
       line-height: 22px;
-      background-color: #FF5F6D;
+      background-color: #251d40;
       border-radius: 15px;
       border: 0;
       padding: 25px;
       transition: 0.3s ease; }
       #chat #form-container-tipo .input-botao-container #botao-enviar:hover {
-        background-color: #FFC371; }
+        background-color: #442c55; }
 @media screen and (max-device-width: 700px) {
   #chat #form-container-tipo {
     height: 100%;
@@ -789,13 +811,13 @@ body {
     font-family: 'Lato-Regular';
     font-size: 22px;
     line-height: 22px;
-    background-color: #FF5F6D;
+    background-color: #251d40;
     border-radius: 15px;
     border: 0;
     padding: 25px;
     transition: 0.3s ease; }
     #chat .input-botao-container-voltar #botao-enviar:hover {
-      background-color: #FFC371; }
+      background-color: #442c55; }
 #chat #form-cidade p {
   font-size: 24px;
   font-family: 'Lato-Regular'; }
@@ -808,7 +830,7 @@ body {
   margin-bottom: 12px; }
 #chat #form-cidade button {
   vertical-align: -webkit-baseline-middle;
-  background-color: #FF5F6D;
+  background-color: #251d40;
   border-radius: 8px;
   color: white;
   height: 45px;
@@ -819,7 +841,7 @@ body {
   padding: 0 25px;
   transition: 0.3s ease; }
   #chat #form-cidade button:hover {
-    background-color: #FFC371; }
+    background-color: #442c55; }
 @media screen and (max-device-width: 700px) {
   #chat #form-cidade p {
     font-size: 20px;
