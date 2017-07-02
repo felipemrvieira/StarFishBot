@@ -2,6 +2,17 @@
     font-family: 'light';
     src: url('fonts/HelveticaLt.ttf') format('truetype');
 }*/
+.typed-cursor {
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite; }
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 @font-face {
   font-family: 'roboto';
   src: url("fonts/roboto/Roboto-Thin.ttf") format("truetype"); }
@@ -81,7 +92,7 @@ body {
       width: 150px; }
   #sec-1 .container h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 40px;
+    font-size: 60px;
     font-weight: bold;
     margin-bottom: 20px;
     color: #503a6d; }
@@ -121,13 +132,13 @@ body {
       max-width: 90%;
       font-size: 20px;
       text-align: center;
-      color: #503a6d;
+      color: #0bb89a;
       font-family: 'Montserrat', sans-serif;
       font-weight: bold;
       text-transform: uppercase;
       padding: 15px 30px;
       position: relative;
-      border: 2px #503a6d solid;
+      border: 2px #0bb89a solid;
       text-transform: uppercase;
       outline: 0;
       overflow: hidden;
@@ -144,8 +155,8 @@ body {
     #sec-1 #botao .fill:before {
       content: "";
       position: absolute;
-      background: #503a6d;
-      color: #503a6d;
+      background: #0bb89a;
+      color: #0bb89a;
       bottom: 0;
       left: 0;
       right: 0;
@@ -230,10 +241,16 @@ body {
       padding-top: 350px; }
       #sec-2 #scene #terra-container #terra {
         width: 80%; }
+      @media screen and (max-device-width: 700px) {
+        #sec-2 #scene #terra-container #terra {
+          width: 180%; } }
     #sec-2 #scene #astronauta-container {
       width: 100%; }
       #sec-2 #scene #astronauta-container #astronauta {
         padding-top: 100px; }
+      @media screen and (max-device-width: 700px) {
+        #sec-2 #scene #astronauta-container #astronauta {
+          width: 60%; } }
 
 #sec-3 {
   padding-bottom: 35px; }

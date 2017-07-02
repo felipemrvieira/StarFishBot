@@ -89,5 +89,11 @@ function($scope, $sce, $location){
     marker.setMap(map);
   });
 
+  var options = {
+    strings: ["Somos marketing", "Somos websites", "Somos aplicativos", "Somos mídias sociais", "Somos StarFish"],
+    typeSpeed: 80,
+    backSpeed: 100
+  }
+  var typed = new Typed("#typed", options);
 
 }]);

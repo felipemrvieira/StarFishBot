@@ -3,6 +3,16 @@
     src: url('fonts/HelveticaLt.ttf') format('truetype');
 }*/
 
+.typed-cursor{
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+}
+@-webkit-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+
 @font-face {
     font-family: 'roboto';
     src: url('fonts/roboto/Roboto-Thin.ttf') format('truetype');
@@ -40,6 +50,7 @@ $cinza-escuro: #444;
 $roxo-claro: #442c55;
 $roxo-escuro: #251d40;
 $roxo: #503a6d;
+$verde: #0bb89a;
 
 @mixin degrade(){
   background: #251d40;
@@ -145,7 +156,7 @@ body{
         }
         h1{
             font-family: 'Montserrat', sans-serif;
-            font-size: 40px;
+            font-size: 60px;
             font-weight: bold;
             margin-bottom: 20px;
             color: $roxo;
@@ -206,7 +217,7 @@ body{
               max-width: 90%;
               font-size: 20px;
               text-align: center;
-              color: $roxo;
+              color: $verde;
               font-family: 'Montserrat', sans-serif;
               font-weight: bold;
               text-transform: uppercase;
@@ -215,7 +226,7 @@ body{
               position: relative;
 
 
-              border: 2px $roxo solid;
+              border: 2px $verde solid;
               text-transform: uppercase;
               outline: 0;
               overflow:hidden;
@@ -229,9 +240,6 @@ body{
               -webkit-transition: 0.2s ease-in;
             }
 
-
-
-
             .fill:hover{
               color: white;
             }
@@ -239,8 +247,8 @@ body{
             .fill:before {
               content: "";
               position: absolute;
-              background: $roxo;
-              color: $roxo;
+              background: $verde;
+              color: $verde;
               bottom: 0;
               left: 0;
               right: 0;
@@ -262,9 +270,6 @@ body{
 
         }
         .pessoa-container{
-
-
-
         }
         @media screen and (max-device-width: 700px) {
           .pessoa-container{
@@ -351,12 +356,23 @@ body{
       #terra{
         width: 80%;
       }
+      @media screen and (max-device-width: 700px) {
+        #terra{
+          width: 180%;
+        }
+      }
     }
 
     #astronauta-container{
       width: 100%;
       #astronauta{
         padding-top: 100px;
+
+      }
+      @media screen and (max-device-width: 700px) {
+        #astronauta{
+          width: 60%;
+        }
       }
     }
 
