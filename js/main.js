@@ -1,4 +1,4 @@
-angular.module('casosJuridicos',['ngRoute']).config(function($routeProvider, $locationProvider) {
+angular.module('StarFish',['ngRoute']).config(function($routeProvider, $locationProvider) {
 
         // $locationProvider.html5Mode(true);
 

@@ -1,4 +1,4 @@
-angular.module('casosJuridicos').controller('LandingController', ['$scope', '$sce', '$location',
+angular.module('StarFish').controller('LandingController', ['$scope', '$sce', '$location',
 function($scope, $sce, $location){
 
   var self = this;
@@ -30,28 +30,28 @@ function($scope, $sce, $location){
   // });
 
 //seta a altura da area
-  $(function() {
-
-      if( navigator.userAgent.match(/Android/i)
-       || navigator.userAgent.match(/webOS/i)
-       || navigator.userAgent.match(/iPhone/i)
-       || navigator.userAgent.match(/iPad/i)
-       || navigator.userAgent.match(/iPod/i)
-       || navigator.userAgent.match(/BlackBerry/i)
-       || navigator.userAgent.match(/Windows Phone/i)
-       ){
-         var height = $(window).height() -50 ;
-         var unitHeight = parseInt(height) + 'px';
-         $('#sec-1').css('height',unitHeight);
-       }
-       else {
-         var height = $(window).height() -110 ;
-         var unitHeight = parseInt(height) + 'px';
-         $('#sec-1').css('height',unitHeight);
-        }
-
-
-  });
+  // $(function() {
+  //
+  //     if( navigator.userAgent.match(/Android/i)
+  //      || navigator.userAgent.match(/webOS/i)
+  //      || navigator.userAgent.match(/iPhone/i)
+  //      || navigator.userAgent.match(/iPad/i)
+  //      || navigator.userAgent.match(/iPod/i)
+  //      || navigator.userAgent.match(/BlackBerry/i)
+  //      || navigator.userAgent.match(/Windows Phone/i)
+  //      ){
+  //        var height = $(window).height() -50 ;
+  //        var unitHeight = parseInt(height) + 'px';
+  //        $('#sec-1').css('height',unitHeight);
+  //      }
+  //      else {
+  //        var height = $(window).height() -110 ;
+  //        var unitHeight = parseInt(height) + 'px';
+  //        $('#sec-1').css('height',unitHeight);
+  //       }
+  //
+  //
+  // });
 
   self.menuAberto = false;
 
@@ -65,14 +65,29 @@ function($scope, $sce, $location){
       document.getElementById("sec-1").style.filter= "blur(1px)";
       self.menuAberto = true;
     }
-
   }
 
   self.closeNav = function() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("sec-1").style.filter= "blur(0px)";
     self.menuAberto = false;
-
-
   }
+
+  var scene = document.getElementById('scene');
+  var parallax = new Parallax(scene);
+
+  $(function myMap() {
+    var mapCanvas = document.getElementById("map");
+    var myCenter = new google.maps.LatLng(-9.653053, -35.714885);
+    var mapOptions = {center: myCenter, zoom: 17, scrollwheel: false,
+      disableDefaultUI: true};
+    var map = new google.maps.Map(mapCanvas,mapOptions);
+    var marker = new google.maps.Marker({
+      position: myCenter,
+      animation: google.maps.Animation.BOUNCE
+    });
+    marker.setMap(map);
+  });
+
+
 }]);

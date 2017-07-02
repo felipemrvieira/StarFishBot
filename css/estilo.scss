@@ -121,111 +121,10 @@ body{
 .container-fluid{
     padding: 0;
 }
-.navbar{
-  margin: 0;
-  background-color: #f7f8fa;
-  border: none;
-  .navbar-brand{
-    height: 110px;
-    padding-top: 25px;
-
-    img{
-      width: 100px;
-      margin-left: 16px;
-
-    }
-
-
-  }
-  @media screen and (max-device-width: 700px) {
-    .navbar-brand{
-      height: 0;
-      img{
-        width: 70px;
-      }
-    }
-  }
-
-  @media screen and (max-device-width: 700px) {
-                .navbar-toggle{
-                  border: none;
-                  padding: 30px 20px;
-                  &:hover{
-                    background-color: inherit;
-                  }
-                }
-            }
-
-  ul{
-    padding-top: 28px;
-
-    li{
-      font-size: 18px;
-      font-family: 'Lato-Regular';
-
-
-      &:hover{
-        border-bottom: 4px solid #FF5F6D;
-      }
-    }
-
-    li:hover{
-      border-bottom: 4px solid #FF5F6D;
-
-    }
-  }
-}
-
-
-.sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 10; /* Stay on top */
-    top: 0;
-    left: 0;
-    background-color: white; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-    -webkit-box-shadow: 4px 0px 27px -8px rgba(163,163,163,1);
--moz-box-shadow: 4px 0px 27px -8px rgba(163,163,163,1);
-box-shadow: 4px 0px 27px -8px rgba(163,163,163,1);
-}
-
-/* The navigation menu links */
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 20px;
-    color: $roxo-escuro;
-    display: block;
-    transition: 0.3s
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover, .offcanvas a:focus{
-    color: $roxo-claro;
-}
-
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-}
 
 
 #sec-1 {
+  height: 100vh;
     // display: -webkit-flex;
     // display: flex;
     // flex-direction: column;
@@ -238,23 +137,26 @@ box-shadow: 4px 0px 27px -8px rgba(163,163,163,1);
 
     .container{
         .info{
-          padding-top: 75px;
+          padding-top: 50px;
+
+          #logo-principal{
+            width: 150px;
+          }
         }
         h1{
-            color: #FF5F6D;
             font-family: 'Montserrat', sans-serif;
             font-size: 40px;
             font-weight: bold;
             margin-bottom: 20px;
+            color: $roxo;
         }
 
         .chamada{
           font-family: 'Montserrat-Light';
-          color: #3d3d3d;
+
           font-size: 38px;
           font-weight: 400;
           line-height: 22px;
-          letter-spacing: .5px;
           color: #3d3d3d;
           padding-bottom: 20px;
         }
@@ -304,16 +206,16 @@ box-shadow: 4px 0px 27px -8px rgba(163,163,163,1);
               max-width: 90%;
               font-size: 20px;
               text-align: center;
-              color: #FF5F6D;
+              color: $roxo;
               font-family: 'Montserrat', sans-serif;
               font-weight: bold;
               text-transform: uppercase;
-              border-radius: 12px;
+              // border-radius: 12px;
               padding: 15px 30px;
               position: relative;
 
 
-              border: 2px #FF5F6D solid;
+              border: 2px $roxo solid;
               text-transform: uppercase;
               outline: 0;
               overflow:hidden;
@@ -337,8 +239,8 @@ box-shadow: 4px 0px 27px -8px rgba(163,163,163,1);
             .fill:before {
               content: "";
               position: absolute;
-              background: #FF5F6D;
-              color: #FF5F6D;
+              background: $roxo;
+              color: $roxo;
               bottom: 0;
               left: 0;
               right: 0;
@@ -360,12 +262,9 @@ box-shadow: 4px 0px 27px -8px rgba(163,163,163,1);
 
         }
         .pessoa-container{
-          text-align: center;
-          #pessoa{
-            padding-top: 10px;
-            padding-bottom: 10px;
-            width: 105%;
-          }
+
+
+
         }
         @media screen and (max-device-width: 700px) {
           .pessoa-container{
@@ -440,49 +339,30 @@ box-shadow: 4px 0px 27px -8px rgba(163,163,163,1);
 
 
 #sec-2{
-  background-color: white;
-  padding: 20px 0 70px 0;
+  overflow: hidden;
+  @include degrade();
+  height: 100vh;
+  #scene{
+    height: 100vh;
 
-
-
-    h1{
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      color: $cinza-escuro;
-      text-align: center;
-      padding: 32px 0 42px 0;
-      margin: 0;
+    #terra-container{
+      bottom: -590px;
+      padding-top: 350px;
+      #terra{
+        width: 80%;
+      }
     }
 
-    @media screen and (max-device-width: 700px) {
-      h1{
-          padding: 32px 0 22px 0;
-        }
+    #astronauta-container{
+      width: 100%;
+      #astronauta{
+        padding-top: 100px;
+      }
     }
 
 
-    .sub-sec{
-      transition: all .2s ease-in-out;
-      p{
-        font-size: 20px;
-        font-family: 'Lato-Regular';
-      }
+  }
 
-      .ajuste-img{
-        width: 35%;
-        // opacity: 0.6;
-        padding: 0 0 16px 0
-      }
-      @media screen and (max-device-width: 700px) {
-        .ajuste-img{
-          width: 28%;
-
-        }
-      }
-
-    }
-    .sub-sec:hover{
--webkit-filter: grayscale(10%);    }
 }
 
 #sec-3{
@@ -659,11 +539,11 @@ box-shadow: 4px 0px 27px -8px rgba(163,163,163,1);
   h1{
     text-align: center;
     font-weight: 700;
-    margin-top: 40px;
+    margin-top: 30px;
     padding-left: 32px;
     padding-right: 32px;
     font-family: 'Montserrat', sans-serif;
-    margin-bottom: 40px;
+    margin-bottom: 70px;
     color: $cinza-escuro;
   }
 
@@ -673,8 +553,14 @@ box-shadow: 4px 0px 27px -8px rgba(163,163,163,1);
     }
   }
 
+  .logo-portfolio{
+    text-align: center;
+    width: 70%;
+    margin: 0 20px 15px 20px;
+  }
+
   p{
-    font-size: 18px;
+    font-size: 16px;
     padding: 0 20px 0 20px;
     text-align: left;
     font-family: 'Lato-Regular';
@@ -694,6 +580,13 @@ box-shadow: 4px 0px 27px -8px rgba(163,163,163,1);
 }
 
 #sec-7{
+    #map{
+        width: 100%;
+        height: 400px;
+    }
+}
+
+#sec-8  {
   height: 500px;
   @include degrade();
 
@@ -863,9 +756,6 @@ box-shadow: 4px 0px 27px -8px rgba(163,163,163,1);
 
       }
 
-
-
-
       p{
         align-self: center;
         display: inline-block;
@@ -922,7 +812,7 @@ box-shadow: 4px 0px 27px -8px rgba(163,163,163,1);
   }
 
   #conversa{
-    padding: 200px 250px 200px 250px;
+    padding: 200px 250px 0px 250px;
     overflow-y: auto;
 
     .mensagem-container{
@@ -935,10 +825,20 @@ box-shadow: 4px 0px 27px -8px rgba(163,163,163,1);
         // background-image: url(../img/avatar-mini4040.png);
 
         #avatar-elo{
-          // border-radius: 8px;
-          transition: background-color 0.5s ease;
+          border-radius: 100%;
+          transition: background-color 0.5s ease-in-out;
+          transition: 2.5s ease-out;
+
           &:hover{
-            background-color: $roxo-claro;
+            transition: 2.5s ease-out;
+            -webkit-animation: neon6 1.5s ease-in-out infinite alternate;
+            -moz-animation: neon6 1.5s ease-in-out infinite alternate;
+            animation: neon6 1.5s ease-in-out infinite alternate;
+            // box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF9900, 0 0 70px #FF9900, 0 0 80px #FF9900, 0 0 100px #FF9900, 0 0 150px #FF9900;
+          }
+
+          img{
+            width: 55px;
           }
 
         }
@@ -960,21 +860,24 @@ box-shadow: 4px 0px 27px -8px rgba(163,163,163,1);
         vertical-align: super;
         display: inline-block;
       }
-      .typing{
 
-        img{
-          padding-left: 10px;
-        }
-      }
 
       #mensagem{
         margin-left: 8px;
         text-align: left;
         font-family: 'Lato-Regular';
+        color: white;
+
 
 
         p{
           font-size: 22px;
+        }
+        #txt-header{
+          font-size: 12px;
+          color: #efc04d;
+          // color: #8d6bbb;
+          margin: 0;
         }
       }
 
@@ -990,6 +893,12 @@ box-shadow: 4px 0px 27px -8px rgba(163,163,163,1);
         p{
           font-size: 22px;
           color: white;
+        }
+        #txt-header{
+          font-size: 12px;
+          color: #efc04d;
+          // color: #8d6bbb;
+          margin: 0;
         }
       }
 
@@ -1051,18 +960,11 @@ box-shadow: 4px 0px 27px -8px rgba(163,163,163,1);
         .avatar{
           padding: 0;
           img{
-            width: 40px;
+            width: 45px;
             border-radius: 100%;
             border: 2px solid white;
 
-            &:hover{
-              // transition: box-shadow 2.5s ease-out;
-              -webkit-animation: neon6 1.5s ease-in-out infinite alternate;
-              -moz-animation: neon6 1.5s ease-in-out infinite alternate;
-              animation: neon6 1.5s ease-in-out infinite alternate;
-              // box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF9900, 0 0 70px #FF9900, 0 0 80px #FF9900, 0 0 100px #FF9900, 0 0 150px #FF9900;
 
-            }
           }
           vertical-align: super;
           display: inline-block;

@@ -1,31 +1,5 @@
 <!-- public/partials/principal.html -->
-  <nav class="navbar navbar-default">
-            <div class="container">
-                <a class="navbar-brand" href="#"><img class="center-block" src="img/logo-vermelha.png" alt="logo"></a>
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-target="#myNavbar" ng-click="landingCtrl.openNav()">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse " id="myNavbar">
-                    <ul class="nav navbar-nav navbar-right">
-                      <!-- <li><a href="javascript:void(0)" class="closebtn" ng-click="landingCtrl.closeNav()">&times;</a></li> -->
-                      <li><a href="#">Ajuda</a></li>
-                      <li><a href="#">Contato</a></li>
-                      <li><a href="#"><span class="glyphicon glyphicon-lock" aria-hidden="true"> </span>  Login</a></li>
 
-                    </ul>
-                </div>
-            </div>
-            <div id="mySidenav" class="sidenav">
-             <a href="javascript:void(0)" class="closebtn" ng-click="landingCtrl.closeNav()">&times;</a>
-             <a href="#">Ajuda</a>
-             <a href="#">Contato</a>
-             <a href="#">Login</a>
-           </div>
-        </nav>
 
 
 
@@ -33,65 +7,60 @@
 <div id="sec-1">
 
   <div class="container">
-    <div class="col-md-6 info">
-      <h1>Precisando de advogado?</h1>
-      <p class="chamada">Explique seu caso jurídico</p>
-      <p class="chamada">gratuitamente e seja</p>
-      <p class="chamada">contactado por advogados</p>
+    <div class="col-md-7 info">
+
+      <img id="logo-principal" src="img/logo-starfish.png" alt="">
+      <h1>Somos aplicativos!</h1>
+      <p class="chamada">Lorem ipsum dolor sit amet</p>
+      <p class="chamada">Lorem ipsum dolor sit amet</p>
+      <p class="chamada">Lorem ipsum dolor sit amet</p>
 
       <div id="botao">
-        <button class="btn btn-default option fill" ng-click="goChat()">Envie seu caso jurídico agora</button>
+        <button class="btn btn-default option fill" ng-click="goChat()">Entre em contato conosco agora!</button>
       </div>
     </div>
 
-    <div class="col-md-6 col-lg-5 pessoa-container">
-      <img id="pessoa" class="" src="img/mulher.png" alt="">
+    <div class="col-md-5 col-lg-5 pessoa-container">
+
+
     </div>
     <div id="botao-mobile">
       <button class="btn btn-default option fill" ng-click="goChat()">Envie seu caso jurídico agora</button>
     </div>
 
-    <div class="col-md-12 seta">
-      <a href="#sec-2"><img class="float" src="img/arrow.png" alt=""></a>
-    </div>
 
   </div>
 </div>
 
 <div id="sec-2">
   <div class="container-fluid">
-    <div class="col-md-12">
-      <h1>Como funciona</h1>
-    </div>
+    <ul id="scene">
+      <li id="terra-container" class="layer" data-depth="0.05">
+        <img class="center-block" id="terra" class="center-block" src="img/terra.png" alt="">
+      </li>
+      <!-- <li class="layer center-block" data-depth="0.60">
+        <img class="center-block"  src="img/iphone.png" alt="">
+      </li> -->
+      <!-- <li class="layer" data-depth="0.80">
+        <img class="center-block"  src="img/samsung.png" alt="">
+      </li> -->
+      <li id="astronauta-container" class="layer" data-depth="0.30">
+        <img id="astronauta" class="center-block"  src="img/astronauta.png" alt="">
+      </li>
 
-    <div class="col-md-3 sub-sec">
-      <img class="center-block ajuste-img" src="img/informe2.png" alt="">
-      <p class="texto-centro">Informe seu problema gratuitamente e com segurança.</p>
-    </div>
-    <div class="col-md-3 sub-sec">
-      <img class="center-block ajuste-img" src="img/selecionaremos.png" alt="">
-      <p class="texto-centro">Selecionaremos o melhor advogado para o seu caso jurídico.</p>
-    </div>
-    <div class="col-md-3 sub-sec">
-      <img class="center-block ajuste-img" src="img/contato-advogado2.png" alt="">
-      <p class="texto-centro">Advogados da sua região entrarão em contato para te orientar com sigilo.</p>
-    </div>
-    <div class="col-md-3 sub-sec">
-      <img class="center-block ajuste-img" src="img/contrate2.png" alt="">
-      <p class="texto-centro">Contrate um advogado, caso necessário.</p>
-    </div>
+    </ul>
 
   </div>
 
 </div>
 
-<div id="sec-3">
+<!-- <div id="sec-3">
   <div class="container-fluid">
       <h1 class="texto-centro">Fale com um advogado.<br>A qualquer hora. De qualquer lugar!</h1>
   </div>
-</div>
+</div> -->
 
-<div id="sec-4">
+<!-- <div id="sec-4">
 
   <div class="container-fluid">
 
@@ -112,9 +81,9 @@
     </div>
   </div>
 
-</div>
+</div> -->
 
-<div id="sec-5">
+<!-- <div id="sec-5">
 
   <div class="container-fluid">
     <div class="col-md-5"></div>
@@ -123,7 +92,7 @@
       <div class="container-fluid">
         <h1>Está com um problema e precisa conversar com um advogado?</h1>
         <!-- <p>Fale com Eloisa, nossa assistente virtual!</p> -->
-        <div id="botao">
+        <!--<div id="botao">
             <button class="btn btn-default option fill" ng-click="goChat()">Envie seu caso jurídico agora!</button>
         </div>
 
@@ -132,31 +101,40 @@
     </div>
   </div>
 
-</div>
+</div> -->
 
 <div id="sec-6">
   <div class="container-fluid">
-    <h1>Veja se o seu caso é semelhante à algum desses:</h1>
+    <h1>Conheça alguns de nossos clientes:</h1>
     <div class="col-md-3">
+      <img class="logo-portfolio" src="img/nathalia.png" alt="">
       <p class="texto-centro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate nulla vel malesuada aliquet. Duis tristique neque tellus,
-        <br><a href="#">Saiba mais</a></p>
+      <br><a href="#">Saiba mais</a></p>
     </div>
     <div class="col-md-3">
+      <img class="logo-portfolio" src="img/bg.png" alt="">
+      <p class="texto-centro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate nulla vel malesuada aliquet. Duis tristique neque tellus,
+      <br><a href="#">Saiba mais</a></p>
+    </div>
+    <div class="col-md-3">
+      <img class="logo-portfolio" src="img/veloo.png" alt="">
       <p class="texto-centro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate nulla vel malesuada aliquet. Duis tristique neque tellus,
       <br><a href="#">Saiba mais</a></p></div>
     <div class="col-md-3">
-      <p class="texto-centro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate nulla vel malesuada aliquet. Duis tristique neque tellus,
-      <br><a href="#">Saiba mais</a></p></div>
-    <div class="col-md-3">
+      <img class="logo-portfolio" src="img/life.png" alt="">
       <p class="texto-centro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate nulla vel malesuada aliquet. Duis tristique neque tellus,
         <br>  <a href="#">Saiba mais</a></p></div>
   </div>
 </div>
 
-<div id="sec-7">
+<div id="sec-7" class="">
+  <div id="map"></div>
+</div>
+
+<div id="sec-8">
   <div class="container-fluid">
     <div id="logo">
-      <a href="#sec-1"><img class="center-block" src="img/logo-branca.png" alt="Logo-Elo"></a>
+      <a href="#sec-1"><img class="center-block" src="img/logo-starfish-branca.png" alt="Logo"></a>
     </div>
     <ul>
       <li> <a data-toggle="modal" data-target="#modal">Quem Somos</a></li>
@@ -166,8 +144,8 @@
 
 
     <ul id="social">
-      <li><a href="https://www.facebook.com/elojuridico" target="_blank"> <i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></li>
-      <li><a href="https://www.instagram.com/elojuridico_oficial" target="_blank"> <i class="fa fa-instagram fa-2x"></i></a></li>
+      <li><a href="" target="_blank"> <i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></li>
+      <li><a href="" target="_blank"> <i class="fa fa-instagram fa-2x"></i></a></li>
     </ul>
 
 

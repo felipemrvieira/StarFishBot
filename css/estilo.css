@@ -71,106 +71,25 @@ body {
 .container-fluid {
   padding: 0; }
 
-.navbar {
-  margin: 0;
-  background-color: #f7f8fa;
-  border: none; }
-  .navbar .navbar-brand {
-    height: 110px;
-    padding-top: 25px; }
-    .navbar .navbar-brand img {
-      width: 100px;
-      margin-left: 16px; }
-  @media screen and (max-device-width: 700px) {
-    .navbar .navbar-brand {
-      height: 0; }
-      .navbar .navbar-brand img {
-        width: 70px; } }
-  @media screen and (max-device-width: 700px) {
-    .navbar .navbar-toggle {
-      border: none;
-      padding: 30px 20px; }
-      .navbar .navbar-toggle:hover {
-        background-color: inherit; } }
-  .navbar ul {
-    padding-top: 28px; }
-    .navbar ul li {
-      font-size: 18px;
-      font-family: 'Lato-Regular'; }
-      .navbar ul li:hover {
-        border-bottom: 4px solid #FF5F6D; }
-    .navbar ul li:hover {
-      border-bottom: 4px solid #FF5F6D; }
-
-.sidenav {
-  height: 100%;
-  /* 100% Full-height */
-  width: 0;
-  /* 0 width - change this with JavaScript */
-  position: fixed;
-  /* Stay in place */
-  z-index: 10;
-  /* Stay on top */
-  top: 0;
-  left: 0;
-  background-color: white;
-  /* Black*/
-  overflow-x: hidden;
-  /* Disable horizontal scroll */
-  padding-top: 60px;
-  /* Place content 60px from the top */
-  transition: 0.5s;
-  /* 0.5 second transition effect to slide in the sidenav */
-  -webkit-box-shadow: 4px 0px 27px -8px #a3a3a3;
-  -moz-box-shadow: 4px 0px 27px -8px #a3a3a3;
-  box-shadow: 4px 0px 27px -8px #a3a3a3; }
-
-/* The navigation menu links */
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 20px;
-  color: #251d40;
-  display: block;
-  transition: 0.3s; }
-
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover, .offcanvas a:focus {
-  color: #442c55; }
-
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px; }
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px; }
-
-  .sidenav a {
-    font-size: 18px; } }
 #sec-1 {
+  height: 100vh;
   overflow: hidden;
   background: #f7f8fa; }
   #sec-1 .container .info {
-    padding-top: 75px; }
+    padding-top: 50px; }
+    #sec-1 .container .info #logo-principal {
+      width: 150px; }
   #sec-1 .container h1 {
-    color: #FF5F6D;
     font-family: 'Montserrat', sans-serif;
     font-size: 40px;
     font-weight: bold;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    color: #503a6d; }
   #sec-1 .container .chamada {
     font-family: 'Montserrat-Light';
-    color: #3d3d3d;
     font-size: 38px;
     font-weight: 400;
     line-height: 22px;
-    letter-spacing: .5px;
     color: #3d3d3d;
     padding-bottom: 20px; }
   @media screen and (min-width: 701px) and (max-width: 1199px) {
@@ -202,14 +121,13 @@ body {
       max-width: 90%;
       font-size: 20px;
       text-align: center;
-      color: #FF5F6D;
+      color: #503a6d;
       font-family: 'Montserrat', sans-serif;
       font-weight: bold;
       text-transform: uppercase;
-      border-radius: 12px;
       padding: 15px 30px;
       position: relative;
-      border: 2px #FF5F6D solid;
+      border: 2px #503a6d solid;
       text-transform: uppercase;
       outline: 0;
       overflow: hidden;
@@ -226,8 +144,8 @@ body {
     #sec-1 #botao .fill:before {
       content: "";
       position: absolute;
-      background: #FF5F6D;
-      color: #FF5F6D;
+      background: #503a6d;
+      color: #503a6d;
       bottom: 0;
       left: 0;
       right: 0;
@@ -239,12 +157,6 @@ body {
   @media screen and (max-device-width: 700px) {
     #sec-1 #botao {
       display: none; } }
-  #sec-1 .pessoa-container {
-    text-align: center; }
-    #sec-1 .pessoa-container #pessoa {
-      padding-top: 10px;
-      padding-bottom: 10px;
-      width: 105%; }
   @media screen and (max-device-width: 700px) {
     #sec-1 .pessoa-container {
       text-align: center; }
@@ -304,31 +216,24 @@ body {
       display: none; } }
 
 #sec-2 {
-  background-color: white;
-  padding: 20px 0 70px 0; }
-  #sec-2 h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    color: #444;
-    text-align: center;
-    padding: 32px 0 42px 0;
-    margin: 0; }
-  @media screen and (max-device-width: 700px) {
-    #sec-2 h1 {
-      padding: 32px 0 22px 0; } }
-  #sec-2 .sub-sec {
-    transition: all .2s ease-in-out; }
-    #sec-2 .sub-sec p {
-      font-size: 20px;
-      font-family: 'Lato-Regular'; }
-    #sec-2 .sub-sec .ajuste-img {
-      width: 35%;
-      padding: 0 0 16px 0; }
-    @media screen and (max-device-width: 700px) {
-      #sec-2 .sub-sec .ajuste-img {
-        width: 28%; } }
-  #sec-2 .sub-sec:hover {
-    -webkit-filter: grayscale(10%); }
+  overflow: hidden;
+  background: #251d40;
+  background: -moz-linear-gradient(45deg, #251d40 2%, #bf1c19 79%, #442c55 79%, #442c55 100%);
+  background: -webkit-linear-gradient(45deg, #251d40 2%, #442c55 79%, #442c55 79%, #442c55 100%);
+  background: linear-gradient(45deg, #251d40 2%, #442c55 79%, #442c55 79%, #442c55 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#251d40', endColorstr='#442c55',GradientType=1 );
+  height: 100vh; }
+  #sec-2 #scene {
+    height: 100vh; }
+    #sec-2 #scene #terra-container {
+      bottom: -590px;
+      padding-top: 350px; }
+      #sec-2 #scene #terra-container #terra {
+        width: 80%; }
+    #sec-2 #scene #astronauta-container {
+      width: 100%; }
+      #sec-2 #scene #astronauta-container #astronauta {
+        padding-top: 100px; }
 
 #sec-3 {
   padding-bottom: 35px; }
@@ -446,17 +351,21 @@ body {
   #sec-6 h1 {
     text-align: center;
     font-weight: 700;
-    margin-top: 40px;
+    margin-top: 30px;
     padding-left: 32px;
     padding-right: 32px;
     font-family: 'Montserrat', sans-serif;
-    margin-bottom: 40px;
+    margin-bottom: 70px;
     color: #444; }
   @media screen and (max-device-width: 700px) {
     #sec-6 h1 {
       text-align: left; } }
+  #sec-6 .logo-portfolio {
+    text-align: center;
+    width: 70%;
+    margin: 0 20px 15px 20px; }
   #sec-6 p {
-    font-size: 18px;
+    font-size: 16px;
     padding: 0 20px 0 20px;
     text-align: left;
     font-family: 'Lato-Regular'; }
@@ -466,24 +375,28 @@ body {
     #sec-6 p {
       padding-bottom: 30px; } }
 
-#sec-7 {
+#sec-7 #map {
+  width: 100%;
+  height: 400px; }
+
+#sec-8 {
   height: 500px;
   background: #251d40;
   background: -moz-linear-gradient(45deg, #251d40 2%, #bf1c19 79%, #442c55 79%, #442c55 100%);
   background: -webkit-linear-gradient(45deg, #251d40 2%, #442c55 79%, #442c55 79%, #442c55 100%);
   background: linear-gradient(45deg, #251d40 2%, #442c55 79%, #442c55 79%, #442c55 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#251d40', endColorstr='#442c55',GradientType=1 ); }
-  #sec-7 #logo {
+  #sec-8 #logo {
     padding-top: 120px; }
-    #sec-7 #logo img {
+    #sec-8 #logo img {
       width: 10%; }
     @media screen and (max-device-width: 700px) {
-      #sec-7 #logo img {
+      #sec-8 #logo img {
         width: 30%; } }
-  #sec-7 ul {
+  #sec-8 ul {
     text-align: center;
     padding-top: 12px; }
-    #sec-7 ul li {
+    #sec-8 ul li {
       font-size: 18px;
       font-family: 'Lato-Regular';
       color: white;
@@ -491,23 +404,23 @@ body {
       display: inline-block;
       text-align: center;
       cursor: pointer; }
-      #sec-7 ul li a {
+      #sec-8 ul li a {
         color: white;
         cursor: pointer; }
-  #sec-7 #social {
+  #sec-8 #social {
     margin-top: 0;
     padding-top: 12px; }
-  #sec-7 #modal .modal-content {
+  #sec-8 #modal .modal-content {
     border-radius: 0;
     border: 0; }
-  #sec-7 #modal .modal-header {
+  #sec-8 #modal .modal-header {
     border-bottom: 0; }
-    #sec-7 #modal .modal-header .close {
+    #sec-8 #modal .modal-header .close {
       font-size: 40px;
       padding-right: 10px; }
-  #sec-7 #modal .modal-body {
+  #sec-8 #modal .modal-body {
     padding: 10px 55px 30px 55px; }
-    #sec-7 #modal .modal-body p {
+    #sec-8 #modal .modal-body p {
       font-size: 18px;
       font-family: 'Lato-Regular';
       color: #636363; }
@@ -614,16 +527,23 @@ body {
   #chat #header {
     padding: 20px; } }
 #chat #conversa {
-  padding: 200px 250px 200px 250px;
+  padding: 200px 250px 0px 250px;
   overflow-y: auto; }
   #chat #conversa .mensagem-container {
     margin-bottom: 32px; }
     #chat #conversa .mensagem-container #avatar-mensagem {
       float: left; }
       #chat #conversa .mensagem-container #avatar-mensagem #avatar-elo {
-        transition: background-color 0.5s ease; }
+        border-radius: 100%;
+        transition: background-color 0.5s ease-in-out;
+        transition: 2.5s ease-out; }
         #chat #conversa .mensagem-container #avatar-mensagem #avatar-elo:hover {
-          background-color: #442c55; }
+          transition: 2.5s ease-out;
+          -webkit-animation: neon6 1.5s ease-in-out infinite alternate;
+          -moz-animation: neon6 1.5s ease-in-out infinite alternate;
+          animation: neon6 1.5s ease-in-out infinite alternate; }
+        #chat #conversa .mensagem-container #avatar-mensagem #avatar-elo img {
+          width: 55px; }
       @media screen and (max-device-width: 700px) {
         #chat #conversa .mensagem-container #avatar-mensagem #avatar-elo {
           height: 40px;
@@ -635,14 +555,17 @@ body {
       display: inline-block; }
       #chat #conversa .mensagem-container .avatar img {
         width: 24px; }
-    #chat #conversa .mensagem-container .typing img {
-      padding-left: 10px; }
     #chat #conversa .mensagem-container #mensagem {
       margin-left: 8px;
       text-align: left;
-      font-family: 'Lato-Regular'; }
+      font-family: 'Lato-Regular';
+      color: white; }
       #chat #conversa .mensagem-container #mensagem p {
         font-size: 22px; }
+      #chat #conversa .mensagem-container #mensagem #txt-header {
+        font-size: 12px;
+        color: #efc04d;
+        margin: 0; }
     #chat #conversa .mensagem-container #resposta {
       margin-right: 10px;
       background-color: #442c55;
@@ -655,6 +578,10 @@ body {
       #chat #conversa .mensagem-container #resposta p {
         font-size: 22px;
         color: white; }
+      #chat #conversa .mensagem-container #resposta #txt-header {
+        font-size: 12px;
+        color: #efc04d;
+        margin: 0; }
     @media screen and (max-device-width: 700px) {
       #chat #conversa .mensagem-container #resposta p {
         font-size: 18px; } }
@@ -691,13 +618,9 @@ body {
       vertical-align: super;
       display: inline-block; }
       #chat #conversa .mensagem-container .avatar img {
-        width: 40px;
+        width: 45px;
         border-radius: 100%;
         border: 2px solid white; }
-        #chat #conversa .mensagem-container .avatar img:hover {
-          -webkit-animation: neon6 1.5s ease-in-out infinite alternate;
-          -moz-animation: neon6 1.5s ease-in-out infinite alternate;
-          animation: neon6 1.5s ease-in-out infinite alternate; }
     #chat #conversa .mensagem-container #mensagem {
       text-align: left;
       font-family: 'Lato-Regular';

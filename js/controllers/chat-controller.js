@@ -1,4 +1,4 @@
-angular.module('casosJuridicos')
+angular.module('StarFish')
 
 .config(function($sceDelegateProvider) {
   $sceDelegateProvider.resourceUrlWhitelist([
@@ -38,26 +38,14 @@ function($location, $interval, $window, $http){
 
 
   var mensagem = ["Olá!", -70,
-  "Sei que o que te trouxe aqui não deve ser um assunto tão agradável, mas não se preocupe eu estou aqui para te ajudar! ",-90,
-  "Antes de começarmos, como posso te chamar?",-50,
-    "formNome",-70,
-
-  //  "Qual a cidade e estado que você mora?",-70,
-  //   "formCidade", -70,
-   "Para selecionarmos o melhor profissional para o seu caso, selecione a área do Direito que mais se aproxima com o seu caso.",-70,
-     "formTipo",-70,
-  "Certo, entendi!", -70,
-  "Agora preciso que conte rapidamente  o seu caso jurídico.",-70,
-    "formDescricao",-70,
-  "Para que você seja contactado por um advogado, precisamos do seu email. ",-70,
-    "formEmail",-70,
-  "E o telefone com DDD?",-70,
-    "formTelefone",-70,
-  "Certo, anotei tudinho aqui!",-70,
-  "Irei analisar seu caso com calma e te encaminhar para o melhor advogado disponível.",-70,
-  "Enquanto isso, verifique seu email, enviaremos algumas informações para confirmação.",-70,
-  "Abraços e boa sorte!", -70,
-      "formVoltar",-70,
+  "Obrigado por entrar em contato!",-50,
+  "Quer ver uma coisa legal?",-50,
+  "port1",-50,
+  "Tudo bem, vou juntar essas informações e passar para o pessoal!",-50,
+  "Assim que possível a gente entra em contato.",-50,
+  "Abraço...",-50,
+  "De 8 braços",-50,
+    // "formNome",-70,
 
   "fim", 8,
   ];
@@ -85,7 +73,7 @@ function($location, $interval, $window, $http){
     }
 
     function validaMsg(){
-      // console.log(self.usuario)
+
       switch (mensagem[i]) {
         case "fim":
           $interval.cancel(enviaMsg);
@@ -136,34 +124,10 @@ function($location, $interval, $window, $http){
                 return error;
               }
 
-
-
-
-
-
             }
 
           }
 
-
-          // $http.get('http://www.geonames.org/childrenJSON?geonameId=3469034')
-          // .then(successCallback, errorCallback);
-          // function successCallback(response){
-          //   var s = angular.fromJson(response);
-          //   estadosObj = s.data.geonames;
-          //
-          //   for(var i = 0; i < estadosObj.length; i++) {
-          //     var estado= new Object();
-          //     estado.nome = estadosObj[i]['adminName1'];
-          //     estado.codigo = estadosObj[i]['geonameId'];
-          //     self.estados.push(estado);
-          //   }
-          //   return;
-          // }
-          // function errorCallback(error){
-          //   console.log(error);
-          //   return error;
-          // }
           self.escondeFormCidade = false;
           $interval.cancel(enviaMsg);
           $(document).scrollTop(10000);
@@ -184,10 +148,26 @@ function($location, $interval, $window, $http){
           $(document).scrollTop(10000);
           console.log(self.usuario)
           break;
-        default:
+        case "port1":
           $('#conversa').append(templateMensagem);
+          $('.mensagem-container:last-child').find("#mensagem").removeClass("ng-hide");
+          $('.mensagem-container:last-child').find(".port").removeClass("ng-hide");
+
+          break;
+          // mensagem padrão
+        default:
+        var currentdate = new Date();
+
+        var datetime = "Octavia às "
+                  + currentdate.getHours() + "h"
+                  + currentdate.getMinutes();
+
+
+          $('#conversa').append(templateMensagem);
+          $('.mensagem-container:last-child').find("#txt-header").text(datetime);
           $('.mensagem-container:last-child').find("#txt").text(mensagem[i]);
           $('.mensagem-container:last-child').find("#mensagem").removeClass("ng-hide");
+
 
           enviaMsg();
           window.navigator.vibrate(200);
