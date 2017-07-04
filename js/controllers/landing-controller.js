@@ -96,4 +96,18 @@ function($scope, $sce, $location){
   }
   var typed = new Typed("#typed", options);
 
+  $(function () { // wait for document ready
+    var controller = new ScrollMagic.Controller();
+		// build scene
+		var scene = new ScrollMagic.Scene({
+      triggerElement: "#sec-2",
+      duration: 600,
+      triggerHook: 0.1
+
+    })
+		.setPin("#scene")
+		.addIndicators({name: "trigger pin"})
+		.addTo(controller);
+	});
+
 }]);

@@ -346,7 +346,7 @@ body{
 #sec-2{
   overflow: hidden;
   @include degrade();
-  height: 100vh;
+  height: 180vh;
   #scene{
     height: 100vh;
 
@@ -375,6 +375,15 @@ body{
         }
       }
     }
+
+    // #iphone-container{
+    //   #iphone{
+    //     padding-top: 100px;
+    //     width: 10%;
+    //
+    //   }
+    //
+    // }
 
 
   }

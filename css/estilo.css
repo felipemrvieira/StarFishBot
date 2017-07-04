@@ -233,7 +233,7 @@ body {
   background: -webkit-linear-gradient(45deg, #251d40 2%, #442c55 79%, #442c55 79%, #442c55 100%);
   background: linear-gradient(45deg, #251d40 2%, #442c55 79%, #442c55 79%, #442c55 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#251d40', endColorstr='#442c55',GradientType=1 );
-  height: 100vh; }
+  height: 180vh; }
   #sec-2 #scene {
     height: 100vh; }
     #sec-2 #scene #terra-container {
