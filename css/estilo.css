@@ -236,6 +236,9 @@ body {
   height: 180vh; }
   #sec-2 #scene {
     height: 100vh; }
+    #sec-2 #scene #ovni {
+      width: 100px;
+      position: absolute; }
     #sec-2 #scene #terra-container {
       bottom: -590px;
       padding-top: 350px; }

@@ -350,6 +350,11 @@ body{
   #scene{
     height: 100vh;
 
+    #ovni{
+      width: 100px;
+      position: absolute;
+    }
+
     #terra-container{
       bottom: -590px;
       padding-top: 350px;
