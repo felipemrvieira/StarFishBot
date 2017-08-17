@@ -22,36 +22,7 @@ function($scope, $sce, $location){
     });
   });
 
-  // $(function(){
-  //     $(".element").typed({
-  //       strings: ["^900 E nós estamos prontos para te atender com os melhores do mercado!"],
-  //       typeSpeed: 0
-  //     });
-  // });
 
-//seta a altura da area
-  // $(function() {
-  //
-  //     if( navigator.userAgent.match(/Android/i)
-  //      || navigator.userAgent.match(/webOS/i)
-  //      || navigator.userAgent.match(/iPhone/i)
-  //      || navigator.userAgent.match(/iPad/i)
-  //      || navigator.userAgent.match(/iPod/i)
-  //      || navigator.userAgent.match(/BlackBerry/i)
-  //      || navigator.userAgent.match(/Windows Phone/i)
-  //      ){
-  //        var height = $(window).height() -50 ;
-  //        var unitHeight = parseInt(height) + 'px';
-  //        $('#sec-1').css('height',unitHeight);
-  //      }
-  //      else {
-  //        var height = $(window).height() -110 ;
-  //        var unitHeight = parseInt(height) + 'px';
-  //        $('#sec-1').css('height',unitHeight);
-  //       }
-  //
-  //
-  // });
 
   self.menuAberto = false;
 
@@ -76,19 +47,22 @@ function($scope, $sce, $location){
   var scene = document.getElementById('scene');
   var parallax = new Parallax(scene);
 
+// mapagoogle maps
   $(function myMap() {
     var mapCanvas = document.getElementById("map");
     var myCenter = new google.maps.LatLng(-9.653053, -35.714885);
-    var mapOptions = {center: myCenter, zoom: 17, scrollwheel: false,
-      disableDefaultUI: true};
+    var mapOptions = {center: myCenter, zoom: 15, scrollwheel: false,
+      };
     var map = new google.maps.Map(mapCanvas,mapOptions);
     var marker = new google.maps.Marker({
       position: myCenter,
+      icon:'img/pin.png',
       animation: google.maps.Animation.BOUNCE
     });
     marker.setMap(map);
   });
 
+// seta a digitação
   var options = {
     strings: ["Somos marketing", "Somos websites", "Somos aplicativos", "Somos mídias sociais", "Somos StarFish"],
     typeSpeed: 80,
@@ -106,7 +80,7 @@ function($scope, $sce, $location){
 
     })
 		.setPin("#scene")
-		.addIndicators({name: "trigger pin"})
+		// .addIndicators({name: "trigger pin"})
 		.addTo(controller);
 	});
 
@@ -160,36 +134,8 @@ function($scope, $sce, $location){
     })
 						.setPin("#ovni")
 						.setTween(tween)
-            .addIndicators({name: "trigger rotate"})
+            // .addIndicators({name: "trigger rotate"})
 						.addTo(controller2);
 	});
-
-  $(function(){
-
-	var $window = $(window);		//Window object
-
-	var scrollTime = 1;			//Scroll time
-	var scrollDistance = 80;		//Distance. Use smaller value for shorter scroll and greater value for longer scroll
-
-	$window.on("mousewheel DOMMouseScroll", function(event){
-
-		event.preventDefault();
-
-		var delta = event.originalEvent.wheelDelta/120 || -event.originalEvent.detail/3;
-		var scrollTop = $window.scrollTop();
-		var finalScroll = scrollTop - parseInt(delta*scrollDistance);
-
-		TweenMax.to($window, scrollTime, {
-			scrollTo : { y: finalScroll, autoKill:true },
-				ease: Power1.easeOut,	//For more easing functions see https://api.greensock.com/js/com/greensock/easing/package-detail.html
-				autoKill: true,
-				overwrite: 5
-			});
-
-	});
-
-});
-
-
 
 }]);
