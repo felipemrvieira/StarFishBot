@@ -348,6 +348,51 @@ body{
         }
 }
 
+#sub-1{
+  height: 100vh;
+  background-color: $roxo-escuro;
+  .container{
+    .chamada{
+      text-transform:uppercase;
+      font-size: 32px;
+      font-family: 'Montserrat', sans-serif;
+      color: white;
+    }
+    .cel{
+      background-image: url(../img/smartphone2.png);
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+  }
+
+
+}
+
+#sub-2{
+  height: 100vh;
+  background-color: $verde;
+  .container{
+    .chamada{
+      text-transform:uppercase;
+      font-size: 32px;
+      font-family: 'Montserrat', sans-serif;
+      color: white;
+    }
+    .cel{
+      background-image: url(../img/smartphone1.png);
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+  }
+}
 
 #sec-2{
   overflow: hidden;

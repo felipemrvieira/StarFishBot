@@ -17,4 +17,6 @@ angular.module('StarFish',['ngRoute']).config(function($routeProvider, $location
 
         $routeProvider.otherwise({redirectTo: '/'});
 
+
+
     });
