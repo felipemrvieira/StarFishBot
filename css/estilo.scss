@@ -1,3 +1,5 @@
+@import "compass/css3";
+
 /*@font-face {
     font-family: 'light';
     src: url('fonts/HelveticaLt.ttf') format('truetype');
@@ -38,19 +40,13 @@
         src: url('fonts/Karma-Regular.ttf') format('truetype');
       }
 
-  .option {
-      -webkit-animation-duration: 2s;
-      -webkit-animation-delay: 4s;
-      animation-duration: 2s;
-      animation-delay: 4s;
-  }
-
 $cinza-claro: #f9f9f9;
 $cinza-escuro: #444;
 $roxo-claro: #442c55;
 $roxo-escuro: #251d40;
 $roxo: #503a6d;
 $verde: #0bb89a;
+
 
 @mixin degrade(){
   background: #251d40;
@@ -141,67 +137,72 @@ body{
 
 
 #sec-1 {
-  height: 100vh;
-    // display: -webkit-flex;
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    // justify-content: center;
+  height: 215vh;
+  background-image:url(../img/shape1.png), url(../img/shape2.png);
+  background-repeat:no-repeat;
+  background-size:45%, 35%;
+  background-position: right top, bottom left;
+  background-color: $cinza-claro;
 
-    overflow: hidden;
+  .container{
+    // @include margens-laterais(90px);
 
-    background: #f7f8fa;
+    .info{
+      padding-top: 50px;
+      #logo-principal{
+        width: 150px;
+      }
+    }
+    #note{
+      background-image:url(../img/macbook2.png);
+      background-repeat:no-repeat;
+      background-size: 130%;
+      background-position:center;
+      margin-top: 35px;
 
-    .container{
-      // @include margens-laterais(90px);
+      height: 700px;
+    }
+      h1{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 60px;
+        font-weight: bold;
+        color: $roxo;
+      }
 
+      .chamada{
+        font-family: 'Montserrat-Light';
+
+        font-size: 38px;
+        font-weight: 400;
+        color: #3d3d3d;
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+
+      @media screen and (min-width: 701px) and (max-width: 1199px){
+        .chamada{
+          font-size: 32px;
+          margin-bottom: 0;
+        }
+      }
+      @media screen and (max-device-width: 700px) {
         .info{
-          padding-top: 50px;
-
-          #logo-principal{
-            width: 150px;
-          }
+          padding-top: 0;
         }
         h1{
-            font-family: 'Montserrat', sans-serif;
-            font-size: 60px;
-            font-weight: bold;
-            color: $roxo;
+          margin-top: 8px;
+          margin-bottom: 0;
+          line-height: 36px;
+          padding-bottom: 10px;
         }
-
         .chamada{
-          font-family: 'Montserrat-Light';
-
-          font-size: 38px;
-          font-weight: 400;
-          color: #3d3d3d;
-          padding-bottom: 20px;
+          font-size: 20px;
+          padding-bottom: 0;
+          margin-bottom: 0;
         }
+      }
 
-        @media screen and (min-width: 701px) and (max-width: 1199px){
-          .chamada{
-            font-size: 32px;
-            margin-bottom: 0;
-          }
-        }
-        @media screen and (max-device-width: 700px) {
-          .info{
-            padding-top: 0;
-          }
-          h1{
-            margin-top: 8px;
-            margin-bottom: 0;
-            line-height: 36px;
-            padding-bottom: 10px;
-          }
-          .chamada{
-            font-size: 20px;
-            padding-bottom: 0;
-            margin-bottom: 0;
-          }
-        }
-
-    }
+  }
 
     @media screen and (max-device-width: 700px) {
                   #conteudo{
@@ -221,60 +222,40 @@ body{
 
             button {
               max-width: 90%;
+              padding: 15px 30px;
+              position: relative;
+              z-index: 1;
+
               font-size: 20px;
               text-align: center;
-              color: $verde;
+              color: white;
               font-family: 'Montserrat', sans-serif;
               font-weight: bold;
               text-transform: uppercase;
-              // border-radius: 12px;
-              padding: 15px 30px;
-              position: relative;
 
-
-              border: 2px $verde solid;
-              text-transform: uppercase;
+              border: none;
+              border-radius: 35px;
               outline: 0;
               overflow:hidden;
-              background: none;
-              z-index: 1;
               cursor: pointer;
-              transition:         0.2s ease-in;
-              -o-transition:      0.2s ease-in;
-              -ms-transition:     0.2s ease-in;
-              -moz-transition:    0.2s ease-in;
-              -webkit-transition: 0.2s ease-in;
+
+              background-color: #37615a; // Old browsers
+              @include filter-gradient(#37615a, #0bb89a, horizontal); // IE6-9
+              @include background-image(linear-gradient(left, #37615a 0%,#0bb89a 100%));
+
+              &:hover{
+                @include filter-gradient(#0bb89a, #37615a,  horizontal); // IE6-9
+                @include background-image(linear-gradient(left, #0bb89a 0%, #37615a 100%));
+              }
             }
 
-            .fill:hover{
-              color: white;
-            }
 
-            .fill:before {
-              content: "";
-              position: absolute;
-              background: $verde;
-              color: $verde;
-              bottom: 0;
-              left: 0;
-              right: 0;
-              top: 100%;
-              z-index: -1;
-              -webkit-transition: top 0.2s ease-in;
-            }
 
-            .fill:hover:before {
-              top: 0;
-            }
+
 
         }
 
-        @media screen and (max-device-width: 700px) {
-            #botao{
-              display: none;
-            }
 
-        }
         .pessoa-container{
         }
         @media screen and (max-device-width: 700px) {
